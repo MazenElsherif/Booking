@@ -33,7 +33,9 @@ public class homePage  {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(pupupButton));
 			driver.findElement(pupupButton).click();
 		} catch (Exception e) {
-			System.out.println("Popup doesn't appear.");		
+			driver.navigate().refresh();	
+			wait.until(ExpectedConditions.visibilityOfElementLocated(pupupButton));
+			driver.findElement(pupupButton).click();
 		}
 	}
 	public void searchForReversation(String city) {

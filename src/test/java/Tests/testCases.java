@@ -12,7 +12,7 @@ import pages.searchPage;
 public class testCases extends testBase {
 
 	@Test(dataProvider = "excelData", dataProviderClass = TestDataProvider.class)
-	public void test(String Destination , String CheckInDate , String CheckOutDate) {
+	public void booking(String Destination , String CheckInDate , String CheckOutDate) {
 		homePageObject= new homePage(driver);
 		searchPageObject=new searchPage(driver);
 		detailsPageObject=new detailsPage(driver);
@@ -30,10 +30,6 @@ public class testCases extends testBase {
 		Assert.assertTrue(driver.findElement(detailsPageObject.hotleName).isDisplayed());
 
 	}
-	//	@Test
-	//	public void booking() {
-
-	//      
-	//	}
+	
 
 }

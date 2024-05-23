@@ -97,7 +97,7 @@ public class testBase {
 	        else {
 	            logger.log(LogStatus.SKIP, "Test Skipped");
 	        }
-//	        driver.quit();
+        driver.quit();
 
 	    }
 	    @BeforeSuite
